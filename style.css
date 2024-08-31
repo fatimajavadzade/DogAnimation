@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.box{
+    width: 250px;
+    height: 350px;
+    background-image: url(./Img/dogPhoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 
+    4px 4px 10px white,
+    4px 4px 10px white,
+    4px 4px 10px white;
+    position: relative;
+    color: white;
+    animation-name: box;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    position: absolute;
+}
+
+h2{
+    z-index: 3;
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    visibility: hidden;
+    font-size: 5px;
+}
+
+.box:hover h2{
+    visibility: visible;
+    font-size: 20px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.boxOpen{
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.box:hover .boxOpen{
+    height: 100%;
+}
+@keyframes box{
+    0%{
+        width: 300px;
+        height: 350px;
+        right: 70%;
+    }
+
+    20%{
+        width: 30px;
+        height: 30px;
+        right: 60%;
+    }
+
+    50%{
+        width: 500px;
+        height: 30px;
+        right: 10%;
+    }
+    70%{
+        width: 30px;
+        height: 30px;
+        right: 10%;
+    }
+    100%{
+        width: 300px;
+        height: 350px;
+        right: 10%;
+    }
+}
